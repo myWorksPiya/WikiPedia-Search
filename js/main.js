@@ -14,14 +14,21 @@ form.addEventListener('submit', searchWiki);
 /* Search Wiki function */
 function searchWiki(event){
     event.preventDefault(); 
-    showGif('show');
-    let searchValue = input.value;
-    updateSearch(searchValue)
-    .then(displayData)
-    .catch(function(error){
-        console.log(error);
+    let searchValue = input.value.trim();
+    if(!(searchValue === '')){
+        showGif('show');
+        updateSearch(searchValue)
+        .then(displayData)
+        .catch(function(error){
+            console.log(error);
+            showGif('hide');
+        });
+    }
+    else {
         showGif('hide');
-    });
+        alert('Please enter something');
+    }
+   
 }
 
 /* function for gettimg the response using API  */
