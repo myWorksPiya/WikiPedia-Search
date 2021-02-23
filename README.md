@@ -1,6 +1,6 @@
 # WikiPedia-Search
 
-A small project using the Wikipedia API for ahowing search result for searched query.
+A small project using the Wikipedia API for showing search result for searched query.
 
 **Technologies Used:**
 - HTML
